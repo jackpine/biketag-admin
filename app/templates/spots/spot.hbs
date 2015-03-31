@@ -9,3 +9,8 @@
   <strong>longitude:</strong> {{model.longitude}} <br />
 </p>
 
+<h3>Guesses</h3>
+{{#each guess in model.guesses}}
+  {{ render 'guesses.guess' guess }}
+{{/each}}
+
