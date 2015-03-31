@@ -1,0 +1,10 @@
+<h1>Guess {{model.id}} - {{model.formattedCreatedAt}}</h1>
+<strong>Spot:</strong> {{#link-to 'spots.spot' model.spot}}Spot {{model.spot.id}}{{/link-to}} <br />
+<strong>Game:</strong> {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}} <br />
+<strong>guessed at:</strong> {{model.createdAt}} <br />
+<strong>location:</strong>
+<a href="https://maps.google.com?q={{model.formattedLocation}}">
+  {{model.formattedLocation}}
+</a> <br />
+<strong>distance from spot:</strong> {{model.distance}} <br />
+

@@ -1,0 +1,13 @@
+<h1>All Games</h1>
+<ol>
+{{#each game in model}}
+  <li>
+    {{#link-to 'games.game' game}}
+      {{game.name}}
+    {{/link-to}}
+  </li>
+{{/each}}
+</ol>
+
+
+

@@ -1,0 +1,13 @@
+<div class="game">
+  <h1>{{model.name}}</h1>
+
+  <h2>Spots</h2>
+  <ol class="spot-list">
+    {{#each spot in model.spots}}
+    <li>
+      {{render 'spots.spot' spot}}
+    </li>
+    {{/each}}
+  </ol>
+</div>
+

@@ -6,4 +6,16 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
+  this.resource('games', function() {
+    this.route('game', { path: ':game_id' });
+  });
+
+  this.resource('spots', function() {
+    this.route('spot', { path: ':spot_id' });
+  });
+
+  this.resource('guesses', function() {
+    this.route('guess', { path: ':guess_id' });
+  });
 });
+
