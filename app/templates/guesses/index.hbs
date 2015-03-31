@@ -1,0 +1,10 @@
+<h1>Gueses</h1>
+<ol>
+  {{#each guess in model}}
+    <li>
+      {{#link-to 'guesses.guess' guess}}
+        Guess {{guess.id}}
+      {{/link-to}}
+    </li>
+  {{/each}}
+</ol>

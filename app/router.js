@@ -13,5 +13,9 @@ export default Router.map(function() {
   this.resource('spots', function() {
     this.route('spot', { path: ':spot_id' });
   });
+
+  this.resource('guesses', function() {
+    this.route('guess', { path: ':guess_id' });
+  });
 });
 
