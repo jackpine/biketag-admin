@@ -1,4 +1,11 @@
-<h2>Spot {{model.id}}</h2>
+<h2>
+  {{#link-to 'spots.spot' model}}Spot {{model.id}}{{/link-to}}
+</h2>
+
+<img src="{{model.imageUrl}}" />
 <p>
-Spot {{model.id}} was captured at {{model.createdAt}}
+  <strong>captured at:</strong> {{model.createdAt}} <br />
+  <strong>latitude:</strong> {{model.latitude}} <br />
+  <strong>longitude:</strong> {{model.longitude}} <br />
 </p>
+

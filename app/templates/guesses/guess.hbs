@@ -1,4 +1,6 @@
-<h2>Guess {{model.id}}</h2>
-<p>
-Guess {{model.id}} was created at {{model.createdAt}}.
-</p>
+{{#link-to 'guesses.guess' model}}
+  <h2>Guess {{model.id}}</h2>
+{{/link-to}}
+<strong>captured at:</strong> {{model.createdAt}} <br />
+<strong>latitude:</strong> {{model.latitude}} <br />
+<strong>longitude:</strong> {{model.longitude}} <br />

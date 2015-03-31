@@ -2,9 +2,7 @@
 <ol>
   {{#each guess in model}}
     <li>
-      {{#link-to 'guesses.guess' guess}}
-        Guess {{guess.id}}
-      {{/link-to}}
+      {{render 'guesses.guess' guess}}
     </li>
   {{/each}}
 </ol>

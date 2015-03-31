@@ -2,9 +2,11 @@
   <h1>{{model.name}}</h1>
 
   <h2>Spots</h2>
-  <ol>
+  <ol class="spot-list">
     {{#each spot in model.spots}}
-    <li>{{#link-to 'spots.spot' spot}}Spot {{spot.id}}{{/link-to}}</li>
+    <li>
+      {{render 'spots.spot' spot}}
+    </li>
     {{/each}}
   </ol>
 </div>
