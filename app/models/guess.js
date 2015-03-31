@@ -3,8 +3,14 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   spot: DS.belongsTo('spot', { async: true }),
   createdAt: DS.attr('date'),
+
+  formattedCreatedAt: function() {
+    return moment(this.get('createdAt')).fromNow();
+  }.property('createdAt'),
+
   location: DS.attr(),
   distance: DS.attr(),
+
   longitude: function() {
     if( this.get('location') === undefined ) {
       return null;
@@ -22,14 +28,14 @@ export default DS.Model.extend({
   }.property('location'),
 
   formattedLocation: function() {
-    var latitude = this.get('latitude')
-    var longitude = this.get('longitude')
+    var latitude = this.get('latitude');
+    var longitude = this.get('longitude');
     if( latitude === undefined || longitude === undefined) {
-      return "missing"
+      return "missing";
     } else {
-      var latLabel = (latitude > 0) ? "N" : "S"
-      var lonLabel = (longitude > 0) ? "E" : "W"
-      return sprintf("%.4d°%s %.4d°%s", Math.abs(latitude), latLabel, Math.abs(longitude), lonLabel);
+      var latLabel = (latitude > 0) ? "N" : "S";
+      var lonLabel = (longitude > 0) ? "E" : "W";
+      return "asdf"; //sprintf("%.4d°%s %.4d°%s", Math.abs(latitude), latLabel, Math.abs(longitude), lonLabel);
     }
   }.property('latitude', 'longitude')
 });
