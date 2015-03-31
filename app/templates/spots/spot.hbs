@@ -10,7 +10,16 @@
 </p>
 
 <h3>Guesses</h3>
+<ol>
 {{#each guess in model.guesses}}
-  {{ render 'guesses.guess' guess }}
+  <li>
+    {{#link-to 'guesses.guess' model}}
+      <h2>Guess {{guess.id}}</h2>
+    {{/link-to}}
+    <strong>captured at:</strong> {{guess.createdAt}} <br />
+    <strong>latitude:</strong> {{guess.latitude}} <br />
+    <strong>longitude:</strong> {{guess.longitude}} <br />
+  </li>
 {{/each}}
+</ol>
 
