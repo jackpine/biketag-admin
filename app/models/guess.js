@@ -35,7 +35,7 @@ export default DS.Model.extend({
     } else {
       var latLabel = (latitude > 0) ? "N" : "S";
       var lonLabel = (longitude > 0) ? "E" : "W";
-      return "asdf"; //sprintf("%.4d°%s %.4d°%s", Math.abs(latitude), latLabel, Math.abs(longitude), lonLabel);
+      return Math.abs(latitude) + "°" + latLabel + " " + Math.abs(longitude) + "°" + lonLabel;
     }
   }.property('latitude', 'longitude')
 });

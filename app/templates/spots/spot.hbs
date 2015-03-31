@@ -1,5 +1,5 @@
 <h2>
-  {{#link-to 'spots.spot' model}}Spot {{model.id}}{{/link-to}}
+  {{#link-to 'spots.spot' model}}Spot {{model.id}} - {{model.formattedCreatedAt}}{{/link-to}}
 </h2>
 
 <img src="{{model.imageUrl}}" />
@@ -13,7 +13,7 @@
 {{#each guess in model.guesses}}
   <li>
     {{#link-to 'guesses.guess' model}}
-    <h2>Guess {{guess.id}} - {{guess.formattedCreatedAt}}</h2>
+      <h2>Guess {{guess.id}} - {{guess.formattedCreatedAt}}</h2>
     {{/link-to}}
     <strong>guessed at:</strong> {{guess.createdAt}} <br />
     <strong>location:</strong> {{guess.formattedLocation}} <br />
