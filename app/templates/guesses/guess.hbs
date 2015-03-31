@@ -1,6 +1,7 @@
-{{#link-to 'guesses.guess' model}}
-  <h2>Guess {{model.id}}</h2>
-{{/link-to}}
-<strong>captured at:</strong> {{model.createdAt}} <br />
-<strong>latitude:</strong> {{model.latitude}} <br />
-<strong>longitude:</strong> {{model.longitude}} <br />
+<h1>Guess {{model.id}} - {{model.formattedCreatedAt}}</h1>
+<strong>Spot:</strong> {{#link-to 'spots.spot' model.spot}}Spot {{model.spot.id}}{{/link-to}} <br />
+<strong>Game:</strong> {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}} <br />
+<strong>guessed at:</strong> {{model.createdAt}} <br />
+<strong>location:</strong> {{model.formattedLocation}} <br />
+<strong>distance from spot:</strong> {{model.distance}} <br />
+

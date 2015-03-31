@@ -2,6 +2,7 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   spot: DS.belongsTo('spot', { async: true }),
+  game: DS.belongsTo('game', { async: true }),
   createdAt: DS.attr('date'),
 
   formattedCreatedAt: function() {
