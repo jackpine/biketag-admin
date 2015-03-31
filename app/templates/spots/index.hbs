@@ -1,9 +1,8 @@
 <h1>Spots</h1>
-<ul>
-{{#each spot in model}}
-  <li>
-    {{#link-to 'spots.spot' spot}}Spot {{spot.id}}{{/link-to}}
-    captured at {{spot.createdAt}}
-  </li>
-{{/each}}
-</ul>
+<ol class="spot-list">
+  {{#each spot in model}}
+    <li>
+      {{render 'spots.spot' spot}}
+    </li>
+  {{/each}}
+</ol>
