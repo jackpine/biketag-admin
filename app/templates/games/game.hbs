@@ -1,7 +1,11 @@
 <div class="game">
-  <h1>{{name}}</h1>
+  <h1>{{model.name}}</h1>
 
   <h2>Spots</h2>
-  {{outlet}}
+  <ol>
+    {{#each spot in model.spots}}
+    <li>{{#link-to 'spots.spot' spot}}Spot {{spot.id}}{{/link-to}}</li>
+    {{/each}}
+  </ol>
 </div>
 
