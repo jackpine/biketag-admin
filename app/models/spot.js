@@ -22,5 +22,17 @@ export default DS.Model.extend({
     } else {
       return this.get('location')['coordinates'][1];
     }
-  }.property('location')
+  }.property('location'),
+
+  formattedLocation: function() {
+    var latitude = this.get('latitude')
+    var longitude = this.get('longitude')
+    if( latitude === undefined || longitude === undefined) {
+      return "missing"
+    } else {
+      var latLabel = (latitude > 0) ? "N" : "S"
+      var lonLabel = (longitude > 0) ? "E" : "W"
+      return Math.abs(latitude) + "°" + latLabel + " " + Math.abs(longitude) + "°" + lonLabel;
+    }
+  }.property('latitude', 'longitude')
 });
