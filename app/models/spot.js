@@ -1,4 +1,5 @@
 import DS from 'ember-data';
+import moment from 'moment';
 
 export default DS.Model.extend({
   game: DS.belongsTo('game', { async: true }),
