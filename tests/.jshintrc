@@ -2,10 +2,11 @@
   "predef": [
     "document",
     "window",
+    "-Promise",
+    "moment",
     "location",
     "setTimeout",
     "$",
-    "-Promise",
     "define",
     "console",
     "visit",
