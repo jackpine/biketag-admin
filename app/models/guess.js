@@ -1,5 +1,4 @@
 import DS from 'ember-data';
-import moment from 'moment';
 
 export default DS.Model.extend({
   spot: DS.belongsTo('spot', { async: true }),
