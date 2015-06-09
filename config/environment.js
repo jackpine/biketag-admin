@@ -1,5 +1,7 @@
 /* jshint node: true */
 
+var secrets = require('./secrets.js');
+
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'biketag-admin',
@@ -16,7 +18,8 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+    secrets: secrets
   };
 
   if (environment === 'development') {
@@ -46,7 +49,7 @@ module.exports = function(environment) {
     'default-src': "'none'",
     'script-src': "'self' 'unsafe-inline' 'unsafe-eval' use.typekit.net connect.facebook.net maps.googleapis.com maps.gstatic.com",
     'font-src': "'self' data: use.typekit.net",
-    'connect-src': "'self' localhost:3000 api.biketag-staging.jackpine.me",
+    'connect-src': "'self' localhost:3000 api.biketag-staging.jackpine.me api.biketag.jackpine.me",
     'img-src': "'self' localhost:3000 www.facebook.com p.typekit.net *",
     'style-src': "'self' 'unsafe-inline' use.typekit.net",
     'frame-src': "s-static.ak.facebook.com static.ak.facebook.com www.facebook.com"
