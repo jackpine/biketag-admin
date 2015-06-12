@@ -1,0 +1,23 @@
+body {
+  padding: 20px;
+}
+
+.spot-image {
+  width: 100px;
+}
+
+.all-games {
+  .game {
+    float: left;
+    position: relative;
+    .game-name {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      text-align: center;
+    }
+    .current-spot.spot-image {
+      width: 200px;
+    }
+  }
+}
