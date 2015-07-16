@@ -2,7 +2,7 @@ body {
   padding: 20px;
 }
 
-.spot-image {
+.spot-image, .guess-image {
   width: 100px;
 }
 
@@ -17,7 +17,8 @@ body {
       text-align: center;
     }
     .current-spot.spot-image {
-      width: 200px;
+      width: 240px;
+      height: 320px;
     }
   }
 }
