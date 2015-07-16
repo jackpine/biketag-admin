@@ -4,6 +4,7 @@ export default DS.Model.extend({
   spot: DS.belongsTo('spot', { async: true }),
   game: DS.belongsTo('game', { async: true }),
   createdAt: DS.attr('date'),
+  imageUrl: DS.attr(),
 
   formattedCreatedAt: function() {
     return moment(this.get('createdAt')).fromNow();

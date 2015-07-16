@@ -1,8 +1,4 @@
 <h1>Guesses</h1>
-<ol>
-  {{#each guess in model}}
-    <li>
-      {{render 'guesses.guess' guess}}
-    </li>
-  {{/each}}
-</ol>
+{{#each guess in model}}
+  {{render 'guesses.guess' guess}}
+{{/each}}

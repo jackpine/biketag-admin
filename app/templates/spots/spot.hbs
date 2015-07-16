@@ -20,6 +20,7 @@
     {{#link-to 'guesses.guess' guess}}
       <h2>Guess {{guess.id}} - {{guess.formattedCreatedAt}}</h2>
     {{/link-to}}
+    <img class="guess-image" src="{{guess.imageUrl}}" />
     <strong>guessed at:</strong> {{guess.createdAt}} <br />
     <strong>location:</strong>
     <a href="https://maps.google.com?q={{guess.formattedLocation}}">
