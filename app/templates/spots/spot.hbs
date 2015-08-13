@@ -14,19 +14,14 @@
 </p>
 
 <h3>Guesses</h3>
-<ol>
+<ol class="spot-guesses-list">
 {{#each guess in model.guesses}}
   <li>
     {{#link-to 'guesses.guess' guess}}
-      <h2>Guess {{guess.id}} - {{guess.formattedCreatedAt}}</h2>
+      <img class="guess-image" src="{{guess.imageUrl}}" />
+      <strong>{{guess.formattedCreatedAt}}</strong> <br />
+      <strong>distance:</strong> {{guess.distance}}
     {{/link-to}}
-    <img class="guess-image" src="{{guess.imageUrl}}" />
-    <strong>guessed at:</strong> {{guess.createdAt}} <br />
-    <strong>location:</strong>
-    <a href="https://maps.google.com?q={{guess.formattedLocation}}">
-      {{guess.formattedLocation}}
-    </a> <br />
-    <strong>distance from spot:</strong> {{guess.distance}} <br />
   </li>
 {{/each}}
 </ol>

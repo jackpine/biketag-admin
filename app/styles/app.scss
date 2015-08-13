@@ -6,6 +6,24 @@ body {
   width: 100px;
 }
 
+.spot-guesses-list {
+  width: auto;
+  height: 400px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.spot-guesses-list li {
+  float: left;
+  width: 200px;
+  h2 {
+    font-size: 10px;
+  }
+  .guess-image {
+    position: absolute;
+  }
+}
+
 .guess-container {
   width: 240px;
   height: 400px;
@@ -39,8 +57,9 @@ body {
       text-align: center;
     }
     .current-spot.spot-image {
+      //ratio should be 9/16
       width: 240px;
-      height: 320px;
+      height: 427px;
     }
   }
 }
