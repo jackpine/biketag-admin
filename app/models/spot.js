@@ -7,6 +7,7 @@ export default DS.Model.extend({
   imageUrl: DS.attr(),
   location: DS.attr(),
   createdAt: DS.attr('date'),
+  userName: DS.attr(),
 
   formattedCreatedAt: function() {
     return moment(this.get('createdAt')).fromNow();

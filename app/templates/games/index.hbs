@@ -4,7 +4,7 @@
   {{#each game in model}}
     {{#link-to 'games.game' game}}
       <div class="game">
-        <div class="game-name">{{game.name}}</div>
+        <div class="game-name">{{game.id}}: {{game.current_spot.userName}}</div>
         <img class="current-spot spot-image" src="{{game.current_spot.imageUrl}}" />
       </div>
     {{/link-to}}
