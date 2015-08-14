@@ -1,16 +1,13 @@
-<div class="guess-container">
-  <img class="guess-image" src="{{model.imageUrl}}" />
-  <div class="guess-info">
-    <h1>Guess {{model.id}}</h1>
-    <strong>{{model.formattedCreatedAt}}</strong> <br />
-    <strong>Spot:</strong> {{#link-to 'spots.spot' model.spot}}Spot {{model.spot.id}}{{/link-to}}, 
-    <strong>Game:</strong> {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}} <br />
-    <strong>guessed at:</strong> {{model.createdAt}} <br />
-    <strong>location:</strong>
-    <a href="https://maps.google.com?q={{model.formattedLocation}}">
-      {{model.formattedLocation}}
-    </a> <br />
-    <strong>distance:</strong> {{model.distance}} <br />
-  </div>
+<img class="guess-image" src="{{model.imageUrl}}" />
+<div class="guess-info">
+  <h1>Guess {{model.id}}</h1>
+  <strong>{{model.formattedCreatedAt}}</strong> <br />
+  <strong>Spot:</strong> {{#link-to 'spots.spot' model.spot}}Spot {{model.spot.id}}{{/link-to}}, 
+  <strong>Game:</strong> {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}} <br />
+  <strong>guessed at:</strong> {{model.createdAt}} <br />
+  <strong>location:</strong>
+  <a href="https://maps.google.com?q={{model.formattedLocation}}">
+    {{model.formattedLocation}}
+  </a> <br />
+  <strong>distance:</strong> {{model.distance}} <br />
 </div>
-

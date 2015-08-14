@@ -1,4 +1,6 @@
 <h1>Guesses</h1>
 {{#each guess in model}}
-  {{render 'guesses.guess' guess}}
+  <div class="guess-container">
+    {{render 'guesses.guess' guess}}
+  </div>
 {{/each}}
