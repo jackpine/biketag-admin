@@ -24,7 +24,7 @@ body {
   }
 }
 
-.guess-container {
+.card-container {
   width: 240px;
   height: 400px;
   float: left;
@@ -33,7 +33,7 @@ body {
     color: black;
     text-decoration: underline;
   }
-  .guess-image {
+  .bg-image {
     z-index: -1;
     opacity: 0.5;
     display: block;

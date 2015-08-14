@@ -1,8 +1,6 @@
 <h1>Spots</h1>
-<ol class="spot-list">
-  {{#each spot in model}}
-    <li>
-      {{render 'spots.partial' spot}}
-    </li>
-  {{/each}}
-</ol>
+{{#each spot in model}}
+  {{#bg-container imageUrl=spot.imageUrl}}
+    {{render 'spots.partial' spot}}
+  {{/bg-container}}
+{{/each}}
