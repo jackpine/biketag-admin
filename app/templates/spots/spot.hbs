@@ -1,17 +1,4 @@
-<h2>
-  {{#link-to 'spots.spot' model}}Spot {{model.id}} - {{model.formattedCreatedAt}}{{/link-to}}
-</h2>
-<strong>Game:</strong> {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}}
-<br />
-
-<img class="spot-image" src="{{model.imageUrl}}" />
-<p>
-  <strong>captured at:</strong> {{model.createdAt}} <br />
-  <strong>location:</strong> 
-  <a href="https://maps.google.com?q={{model.formattedLocation}}">
-    {{model.formattedLocation}}
-  </a> <br />
-</p>
+{{render 'spots.partial' model}}
 
 <h3>Guesses</h3>
 <ol class="spot-guesses-list">
