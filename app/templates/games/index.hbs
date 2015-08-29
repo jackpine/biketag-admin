@@ -1,13 +1,10 @@
 <h1>All Games</h1>
 
 <div class="all-games">
-  {{#each game in model}}
-    {{#link-to 'games.game' game}}
-      <div class="game">
-        <div class="game-name">{{game.id}}: {{game.current_spot.userName}}</div>
-        <img class="current-spot spot-image" src="{{game.current_spot.imageUrl}}" />
-      </div>
-    {{/link-to}}
+  {{#each game in sortedModel}}
+    {{#bg-container imageUrl=game.current_spot.imageUrl}}
+      <div class="header">{{game.id}}: {{game.current_spot.userName}}</div>
+    {{/bg-container}}
   {{/each}}
 </div>
 

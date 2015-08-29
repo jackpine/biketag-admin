@@ -8,6 +8,9 @@ export default DS.Model.extend({
   location: DS.attr(),
   createdAt: DS.attr('date'),
   userName: DS.attr(),
+  order: function() {
+    return parseInt(this.get('id'), 10);
+  }.property('id'),
 
   formattedCreatedAt: function() {
     return moment(this.get('createdAt')).fromNow();
