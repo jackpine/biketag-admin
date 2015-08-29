@@ -24,7 +24,7 @@ body {
   }
 }
 
-.card-container {
+.bg-image-container {
   width: 240px;
   height: 400px;
   float: left;
@@ -44,18 +44,21 @@ body {
   .guess-info {
     margin: 10px;
   }
+  .header {
+    background: rgba(0, 0, 0, 0.5);
+    color: #eee;
+    width: 100%;
+    text-align: center;
+    a, a:visited, a:hover {
+      color: #eee;
+    }
+  }
 }
 
 .all-games {
   .game {
     float: left;
     position: relative;
-    .game-name {
-      position: absolute;
-      background: rgba(0, 0, 0, 0.5);
-      width: 100%;
-      text-align: center;
-    }
     .current-spot.spot-image {
       //ratio should be 9/16
       width: 240px;
