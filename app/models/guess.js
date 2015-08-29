@@ -5,6 +5,9 @@ export default DS.Model.extend({
   game: DS.belongsTo('game', { async: true }),
   createdAt: DS.attr('date'),
   imageUrl: DS.attr(),
+  order: function() {
+    return parseInt(this.get('id'), 10);
+  }.property('id'),
 
   formattedCreatedAt: function() {
     return moment(this.get('createdAt')).fromNow();

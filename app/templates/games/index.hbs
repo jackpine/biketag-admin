@@ -1,7 +1,7 @@
 <h1>All Games</h1>
 
 <div class="all-games">
-  {{#each game in model}}
+  {{#each game in sortedModel}}
     {{#bg-container imageUrl=game.current_spot.imageUrl}}
       <div class="header">{{game.id}}: {{game.current_spot.userName}}</div>
     {{/bg-container}}

@@ -1,5 +1,5 @@
 <h1>Spots</h1>
-{{#each spot in model}}
+{{#each spot in sortedModel}}
   {{#bg-container imageUrl=spot.imageUrl}}
     {{render 'spots.partial' spot}}
   {{/bg-container}}

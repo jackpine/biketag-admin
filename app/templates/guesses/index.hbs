@@ -1,5 +1,5 @@
 <h1>Guesses</h1>
-{{#each guess in model}}
+{{#each guess in sortedModel}}
   {{#bg-container imageUrl=guess.imageUrl}}
     {{render 'guesses.partial' guess}}
   {{/bg-container}}
