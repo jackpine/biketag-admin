@@ -15,6 +15,7 @@
     "active-model-adapter": "~2.0",
     "mapbox.js": "~2.2.1",
     "leaflet": "~0.7.3",
+    "lodash": "~3.10.1",
     "qunit": "~1.18.0"
   },
   "resolutions": {

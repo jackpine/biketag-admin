@@ -1,4 +1,8 @@
 <h1>Guesses</h1>
+
+{{#map-plot markers=sortedModel}}
+{{/map-plot}}
+
 {{#each sortedModel as |guess|}}
   {{#bg-container imageUrl=guess.imageUrl}}
     {{render 'guesses.partial' guess}}

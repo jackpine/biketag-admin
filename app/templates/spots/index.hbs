@@ -1,9 +1,7 @@
 <h1>Spots</h1>
 
-<div class="row">
-{{#map-plot class="twelve columns"}}
+{{#map-plot markers=sortedModel}}
 {{/map-plot}}
-</div>
 
 {{#each sortedModel as |spot|}}
   {{#bg-container imageUrl=spot.imageUrl}}
