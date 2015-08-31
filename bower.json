@@ -13,6 +13,8 @@
     "moment": "~2.9.0",
     "foundation": "~5.5.2",
     "active-model-adapter": "~2.0",
+    "mapbox.js": "~2.2.1",
+    "leaflet": "~0.7.3",
     "qunit": "~1.18.0"
   },
   "resolutions": {
