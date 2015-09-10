@@ -1,9 +1,18 @@
 <div class="header">
-  {{#link-to 'guesses.guess' model}}Guess {{model.id}}{{/link-to}}
+  {{#link-to 'guesses.guess' model}}
+    {{model.id}}: {{model.userName}} was
+    {{#if model.correct}}
+      right!
+    {{/if}}
+    {{#if model.incorrect}}
+      wrong.
+    {{/if}}
+
+  {{/link-to}}
 </div>
-<strong>{{model.formattedCreatedAt}}</strong> <br />
-<strong>Spot:</strong> {{#link-to 'spots.spot' model.spot}}Spot {{model.spot.id}}{{/link-to}}, 
-<strong>Game:</strong> {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}} <br />
+{{model.formattedCreatedAt}} on
+{{#link-to 'spots.spot' model.spot}}Spot {{model.spot.id}}{{/link-to}}
+in {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}} <br />
 <strong>guessed at:</strong> {{model.createdAt}} <br />
 <strong>location:</strong>
 <a href="https://maps.google.com?q={{model.formattedLocation}}">

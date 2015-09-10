@@ -1,7 +1,9 @@
 <div class="header">
-  {{#link-to 'spots.spot' model}}Spot {{model.id}} - {{model.formattedCreatedAt}}{{/link-to}}
+  {{#link-to 'spots.spot' model}}
+    {{model.id}}: Where is {{model.userName}}'s bicycle?
+  {{/link-to}}
 </div>
-<strong>Game:</strong> {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}}
+{{model.formattedCreatedAt}} in {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}}
 <br />
 <p>
   <strong>captured at:</strong> {{model.createdAt}} <br />
