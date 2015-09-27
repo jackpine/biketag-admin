@@ -3,7 +3,7 @@
 
   <h2>Spots</h2>
   <ol class="spot-list">
-    {{#each spot in model.spots}}
+    {{#each model.spots as |spot|}}
     <li>
       {{render 'spots.spot' spot}}
     </li>

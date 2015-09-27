@@ -4,7 +4,7 @@
 
 <h3>Guesses</h3>
 <ol class="spot-guesses-list">
-{{#each guess in model.guesses}}
+{{#each model.guesses as |guess|}}
   <li>
     {{#link-to 'guesses.guess' guess}}
       <img class="guess-image" src="{{guess.imageUrl}}" />
