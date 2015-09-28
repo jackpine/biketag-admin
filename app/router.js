@@ -6,15 +6,15 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.resource('games', function() {
+  this.route('games', { resetNamespace: true }, function() {
     this.route('game', { path: ':game_id' });
   });
 
-  this.resource('spots', function() {
+  this.route('spots', { resetNamespace: true }, function() {
     this.route('spot', { path: ':spot_id' });
   });
 
-  this.resource('guesses', function() {
+  this.route('guesses',  { resetNamespace: true }, function() {
     this.route('guess', { path: ':guess_id' });
   });
 });
