@@ -1,9 +1,3 @@
-<h1>Spots</h1>
-
-{{#map-plot features=sortedModel urlPrefix='spots'}}
-  <p>This is the block</p>
-{{/map-plot}}
-
 {{#each sortedModel as |spot|}}
   {{#bg-container imageUrl=spot.imageUrl}}
     {{render 'spots.partial' spot}}

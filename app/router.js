@@ -11,6 +11,7 @@ Router.map(function() {
   });
 
   this.route('spots', { resetNamespace: true }, function() {
+    this.route('map');
     this.route('spot', { path: ':spot_id' });
   });
 

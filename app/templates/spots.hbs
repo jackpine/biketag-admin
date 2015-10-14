@@ -1,1 +1,13 @@
+<dl class="sub-nav">
+  <dt>Spots:</dt>
+
+  {{#link-to "spots.index" tagName="dd"}}
+    <a href={{view.href}}>List</a>
+  {{/link-to}}
+  {{#link-to "spots.map" tagName="dd"}}
+    <a href={{view.href}}>Map</a>
+  {{/link-to}}
+</dl>
+
 {{outlet}}
+
