@@ -14,17 +14,20 @@ export default Ember.Component.extend({
         var markerLayer = L.mapbox.featureLayer();
 
         var focus = this.get('focus');
-        console.log('focus', focus);
         if (focus) {
             var focusLocation = [focus.get('latitude'), focus.get('longitude')];
+
             var marker = L.marker(focusLocation);
+            marker.setIcon(L.mapbox.marker.icon({
+                'marker-color': '#ff8888',
+                'marker-size': 'large'
+            }));
             marker.addTo(map);
 
             map.setView(focusLocation);
         }
 
         var features = this.get('features');
-        console.log('features', features);
         if (features) {
             var component = this;
             var markers = features.map(function(feature) {

@@ -2,7 +2,6 @@
 
 {{render 'spots.partial' model}}
 
-{% FIXME why can't we pass in features this way? %}
 {{#map-plot focus=model features=model.guesses urlPrefix="guesses"}}
 {{/map-plot}}
 
