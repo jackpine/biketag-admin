@@ -27,13 +27,12 @@ export default Ember.Component.extend({
         console.log('features', features);
         if (features) {
             var component = this;
-            var markers = _.map(features, function(feature) {
+            var markers = features.map(function(feature) {
                 var url = '/' + component.get('urlPrefix') + '/' + feature.get('id');
                 return L.marker([feature.get('latitude'), feature.get('longitude')])
                     .bindPopup('<a href="' + url + '">'+ feature.get('id') +'</a>');
             });
-
-            _.each(markers, function(marker) {
+            markers.forEach(function(marker) {
                 marker.addTo(markerLayer);
             });
         }

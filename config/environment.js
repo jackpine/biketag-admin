@@ -50,7 +50,7 @@ module.exports = function(environment) {
     'script-src': "'self' 'unsafe-inline' 'unsafe-eval' use.typekit.net connect.facebook.net maps.googleapis.com maps.gstatic.com",
     'font-src': "'self' data: use.typekit.net",
     'connect-src': "'self' localhost:3000 api.biketag.dev api.biketag-staging.jackpine.me api.biketag.jackpine.me *.tiles.mapbox.com",
-    'img-src': "'self' localhost:3000 www.facebook.com p.typekit.net *.tiles.mapbox.com data:",
+    'img-src': "'self' localhost:3000 www.facebook.com p.typekit.net biketag-production.s3.amazonaws.com *.tiles.mapbox.com data:",
     'style-src': "'self' 'unsafe-inline' use.typekit.net",
     'frame-src': "s-static.ak.facebook.com static.ak.facebook.com www.facebook.com"
   }
