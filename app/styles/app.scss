@@ -43,11 +43,16 @@ body {
   .bg-image-content {
     height: 100%;
     width: 100%;
-    background: rgba(255, 255, 255, 0.5);
   }
   .bg-image-content:hover {
-    opacity: 0.5;
+    /*dont push down header*/
+    margin-top: -2px; 
+    border: solid #9ecaed 2px;
+    border-radius: 2px;
+    outline: none;
+    box-shadow: 0 0 10px #9ecaed;
   }
+
   .header {
     background: rgba(0, 0, 0, 0.5);
     color: #eee;
@@ -72,7 +77,7 @@ body {
 }
 
 #map {
-  height: 300px;
+  height: 450px;
   width: 100%;
 }
 

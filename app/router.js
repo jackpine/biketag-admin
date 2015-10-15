@@ -16,6 +16,7 @@ Router.map(function() {
   });
 
   this.route('guesses',  { resetNamespace: true }, function() {
+    this.route('map');
     this.route('guess', { path: ':guess_id' });
   });
 });
