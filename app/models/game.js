@@ -7,6 +7,7 @@ export default DS.Model.extend({
   }.property('spots'),
   currentSpot: DS.belongsTo('spot', { async: true, inverse: null }),
   name: DS.attr(),
+  createdAt: DS.attr('date'),
   order: function() {
     return parseInt(this.get('id'), 10);
   }.property('id'),
