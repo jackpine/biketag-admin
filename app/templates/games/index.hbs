@@ -1,9 +1,7 @@
-<h1>All Games</h1>
-
 <div class="all-games">
   {{#each sortedModel as |game|}}
-    {{#bg-container imageUrl=game.current_spot.imageUrl}}
-      <div class="header">{{game.id}}: {{game.current_spot.userName}}</div>
+    {{#bg-container imageUrl=game.currentSpot.imageUrl}}
+      <div class="header">{{game.id}}: {{game.currentSpot.userName}}</div>
     {{/bg-container}}
   {{/each}}
 </div>
