@@ -2,6 +2,9 @@ import DS from 'ember-data';
 
 export default DS.Model.extend({
   spots: DS.hasMany('spot', { async: true, inverse: "game" }),
+  previousSpots: function() {
+    return this.get('spots').sortBy('createdAt').reverse().slice(1);
+  }.property('spots'),
   currentSpot: DS.belongsTo('spot', { async: true, inverse: null }),
   name: DS.attr(),
   order: function() {

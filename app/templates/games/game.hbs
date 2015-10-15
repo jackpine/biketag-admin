@@ -1,13 +1,17 @@
 <div class="game">
   <h1>{{model.name}}</h1>
 
-  <h2>Spots</h2>
-  <ol class="spot-list">
-    {{#each model.spots as |spot|}}
-    <li>
-      {{render 'spots.spot' spot}}
-    </li>
-    {{/each}}
-  </ol>
+  <h2>Current Spot</h2>
+  {{#bg-container imageUrl=model.currentSpot.imageUrl}}
+  {{render 'spots.partial' model.currentSpot}}
+  {{/bg-container}}
+
+  <hr />
+  <h2>Previos Spots</h2>
+  {{#each model.previousSpots as |spot|}}
+    {{#bg-container imageUrl=spot.imageUrl}}
+      {{render 'spots.partial' spot}}
+    {{/bg-container}}
+  {{/each}}
 </div>
 
