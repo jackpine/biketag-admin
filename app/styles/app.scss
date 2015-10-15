@@ -43,16 +43,14 @@ body {
   .bg-image-content {
     height: 100%;
     width: 100%;
+    .details {
+      opacity: 0;
+    }
+    &:hover .details {
+      background-color: rgba(255, 255, 255, 0.5);
+      opacity: 1.0;
+    }
   }
-  .bg-image-content:hover {
-    /*dont push down header*/
-    margin-top: -2px; 
-    border: solid #9ecaed 2px;
-    border-radius: 2px;
-    outline: none;
-    box-shadow: 0 0 10px #9ecaed;
-  }
-
   .header {
     background: rgba(0, 0, 0, 0.5);
     color: #eee;
@@ -60,6 +58,7 @@ body {
     text-align: center;
     a, a:visited, a:hover {
       color: #eee;
+      text-decoration: none;
     }
   }
 }
