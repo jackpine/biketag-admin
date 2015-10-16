@@ -18,9 +18,9 @@ module.exports = function(defaults) {
   app.import('bower_components/mapbox.js/mapbox.js');
 
   var mapboxImages = new Funnel('bower_components/mapbox.js/images', {
-      srcDir: '/',
-      include: ['*'],
-      destDir: '/assets/images'
+    srcDir: '/',
+    include: ['*'],
+    destDir: '/assets/images'
   });
 
   return app.toTree(mapboxImages);
