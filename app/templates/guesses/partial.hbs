@@ -3,19 +3,20 @@
     {{model.id}}: {{model.userName}} was
     {{#if model.correct}}
       right!
-    {{/if}}
-    {{#if model.incorrect}}
+    {{else}}
       wrong.
     {{/if}}
 
   {{/link-to}}
 </div>
-{{model.formattedCreatedAt}} on
-{{#link-to 'spots.spot' model.spot}}Spot {{model.spot.id}}{{/link-to}}
-in {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}} <br />
-<strong>guessed at:</strong> {{model.createdAt}} <br />
-<strong>location:</strong>
-<a href="https://maps.google.com?q={{model.formattedLocation}}">
-  {{model.formattedLocation}}
-</a> <br />
-<strong>distance:</strong> {{model.distance}} <br />
+<div class="details">
+  {{model.formattedCreatedAt}} on
+  {{#link-to 'spots.spot' model.spot}}Spot {{model.spot.id}}{{/link-to}}
+  in {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}} <br />
+  <strong>guessed at:</strong> {{model.createdAt}} <br />
+  <strong>location:</strong>
+  <a href="https://maps.google.com?q={{model.formattedLocation}}">
+    {{model.formattedLocation}}
+  </a> <br />
+  <strong>distance:</strong> {{model.distance}} <br />
+</div>

@@ -7,11 +7,6 @@ export default DS.Model.extend({
   imageUrl: DS.attr(),
   userName: DS.attr(),
   correct: DS.attr(),
-  incorrect: function() {
-    //FIXME this is because I don't know how to do an else
-    //in the handlebar template and have no wifi to look it up.
-    return !this.get('correct');
-  }.property('correct'),
   order: function() {
     return parseInt(this.get('id'), 10);
   }.property('id'),

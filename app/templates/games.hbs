@@ -1,1 +1,10 @@
+<dl class="sub-nav">
+  <dt>Games:</dt>
+  {{#link-to "games.index" tagName="dd"}}
+    <a href={{view.href}}>List</a>
+  {{/link-to}}
+  {{#link-to "games.map" tagName="dd"}}
+    <a href={{view.href}}>Map</a>
+  {{/link-to}}
+</dl>
 {{outlet}}

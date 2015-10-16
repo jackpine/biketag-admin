@@ -7,14 +7,17 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('games', { resetNamespace: true }, function() {
+    this.route('map');
     this.route('game', { path: ':game_id' });
   });
 
   this.route('spots', { resetNamespace: true }, function() {
+    this.route('map');
     this.route('spot', { path: ':spot_id' });
   });
 
   this.route('guesses',  { resetNamespace: true }, function() {
+    this.route('map');
     this.route('guess', { path: ':guess_id' });
   });
 });

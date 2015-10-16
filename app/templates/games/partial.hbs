@@ -1,0 +1,9 @@
+<div class="header">
+  {{#link-to 'games.game' model}}
+    {{model.id}}: {{model.currentSpot.userName}}
+  {{/link-to}}
+</div>
+<div class="details">
+  <strong>Started At:</strong> {{model.createdAt}} <br />
+  <strong>Spots:</strong> {{model.spots.length}} <br />
+</div>

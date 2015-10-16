@@ -3,13 +3,15 @@
     {{model.id}}: Where is {{model.userName}}'s bicycle?
   {{/link-to}}
 </div>
-{{model.formattedCreatedAt}} in {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}}
-<br />
-<p>
-  <strong>captured at:</strong> {{model.createdAt}} <br />
-  <strong>location:</strong> 
-  <a href="https://maps.google.com?q={{model.formattedLocation}}">
-    {{model.formattedLocation}}
-  </a> <br />
-  <strong>guess count:</strong> {{model.guesses.length}}
-</p>
+<div class="details">
+  {{model.formattedCreatedAt}} in {{#link-to 'games.game' model.game}}Game {{model.game.id}}{{/link-to}}
+  <br />
+  <p>
+    <strong>captured at:</strong> {{model.createdAt}} <br />
+    <strong>location:</strong> 
+    <a href="https://maps.google.com?q={{model.formattedLocation}}">
+      {{model.formattedLocation}}
+    </a> <br />
+    <strong>guess count:</strong> {{model.guesses.length}}
+  </p>
+</div>

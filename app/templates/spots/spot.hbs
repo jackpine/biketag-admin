@@ -2,6 +2,9 @@
 
 {{render 'spots.partial' model}}
 
+{{#map-plot focus=model features=model.guesses urlPrefix="guesses"}}
+{{/map-plot}}
+
 <h3>Guesses</h3>
 <ol class="spot-guesses-list">
 {{#each model.guesses as |guess|}}
