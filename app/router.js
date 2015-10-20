@@ -20,6 +20,10 @@ Router.map(function() {
     this.route('map');
     this.route('guess', { path: ':guess_id' });
   });
+
+  this.route('users', { resetNamespace: true }, function() {
+    this.route('user', { path: ':user_id' });
+  });
 });
 
 export default Router;

@@ -1,0 +1,32 @@
+<table>
+  <tr>
+    <th>
+      Id
+    </th>
+    <th>
+      Name
+    </th>
+    <th>
+      Score
+    </th>
+    <th>
+      Created At
+    </th>
+  </tr>
+  {{#each model as |user|}}
+  <tr>
+    <td>
+      {{user.id}}
+    </td>
+    <td>
+      {{user.name}}
+    </td>
+    <td>
+      {{user.score}}
+    </td>
+    <td>
+      {{user.formattedCreatedAt}}
+    </td>
+  </tr>
+{{/each}}
+</table>
