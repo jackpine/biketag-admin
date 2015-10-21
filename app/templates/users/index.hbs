@@ -14,19 +14,7 @@
     </th>
   </tr>
   {{#each model as |user|}}
-  <tr>
-    <td>
-      {{user.id}}
-    </td>
-    <td>
-      {{user.name}}
-    </td>
-    <td>
-      {{user.score}}
-    </td>
-    <td>
-      {{user.formattedCreatedAt}}
-    </td>
-  </tr>
-{{/each}}
+    {{#user-row user=user}}
+    {{/user-row}}
+  {{/each}}
 </table>
