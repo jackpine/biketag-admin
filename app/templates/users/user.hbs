@@ -1,0 +1,23 @@
+<h1>{{model.name}}</h1>
+<strong>id:</strong> {{model.id}} <br />
+<strong>created:</strong> {{model.createdAt}} <br />
+
+<h3>{{model.name}}'s Spots ({{model.spots.length}})</h3>
+
+{{#each model.spots as |spot|}}
+  {{#bg-container imageUrl=spot.imageUrl}}
+    {{render 'spots.partial' spot}}
+  {{/bg-container}}
+{{/each}}
+
+<br style="clear: both;" />
+<h3>{{model.name}}'s Guesses ({{model.guesses.length}})</h3>
+
+{{#each model.guesses as |guess|}}
+  {{#bg-container imageUrl=guess.imageUrl}}
+    {{render 'guesses.partial' guess}}
+  {{/bg-container}}
+{{/each}}
+
+
+

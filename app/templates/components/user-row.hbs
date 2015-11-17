@@ -1,0 +1,17 @@
+<td>
+  {{#link-to 'users.user' user}}
+    {{user.id}}
+  {{/link-to}}
+</td>
+<td>
+  {{input type="text" value=user.name}}
+</td>
+<td>
+  {{user.score}}
+</td>
+<td>
+  {{user.formattedCreatedAt}}
+</td>
+<td>
+  <button class="small" {{action "updateModel" user}}>Update</button>
+</td>

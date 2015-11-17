@@ -1,0 +1,27 @@
+<table>
+  <thead>
+    <tr>
+      <th>
+        Id
+      </th>
+      <th>
+        Name
+      </th>
+      <th>
+        Score
+      </th>
+      <th>
+        Created At
+      </th>
+      <th>
+        Actions
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |user|}}
+      {{#user-row user=user}}
+      {{/user-row}}
+    {{/each}}
+  </tbody>
+</table>
