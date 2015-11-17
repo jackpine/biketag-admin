@@ -17,7 +17,7 @@ export default DS.Model.extend({
   }.property('currentSpot'),
 
   longitude: function() {
-    if( this.get('location') === undefined ) {
+    if( this.get('location') === undefined || this.get('location') === null) {
       return null;
     } else {
       return this.get('location')['coordinates'][0];
@@ -25,7 +25,7 @@ export default DS.Model.extend({
   }.property('location'),
 
   latitude: function() {
-    if( this.get('location') === undefined ) {
+    if( this.get('location') === undefined || this.get('location') === null) {
       return null;
     } else {
       return this.get('location')['coordinates'][1];
