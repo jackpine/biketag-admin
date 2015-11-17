@@ -1,7 +1,7 @@
 import DS from 'ember-data';
 import Locatable from './concerns/locatable';
 
-var Spot = DS.Model.extend(Locatable, {
+export default DS.Model.extend(Locatable, {
   game: DS.belongsTo('game', { async: true }),
   user: DS.belongsTo('user', { async: true }),
   guesses: DS.hasMany('guess', { async: true }),
@@ -16,6 +16,3 @@ var Spot = DS.Model.extend(Locatable, {
   }.property('createdAt'),
 
 });
-
-
-export default Spot;
