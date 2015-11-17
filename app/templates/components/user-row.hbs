@@ -1,5 +1,7 @@
 <td>
-  {{user.id}}
+  {{#link-to 'users.user' user}}
+    {{user.id}}
+  {{/link-to}}
 </td>
 <td>
   {{input type="text" value=user.name}}

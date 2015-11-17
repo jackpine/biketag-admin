@@ -3,6 +3,7 @@ import DS from 'ember-data';
 export default DS.Model.extend({
   spot: DS.belongsTo('spot', { async: true }),
   game: DS.belongsTo('game', { async: true }),
+  user: DS.belongsTo('user', { async: true }),
   createdAt: DS.attr('date'),
   imageUrl: DS.attr(),
   userName: DS.attr(),
