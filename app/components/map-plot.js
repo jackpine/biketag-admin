@@ -33,7 +33,7 @@ export default Ember.Component.extend({
       var markers = features.map(function(feature) {
         var url = '/' + component.get('urlPrefix') + '/' + feature.get('id');
         return L.marker([feature.get('latitude'), feature.get('longitude')])
-        .bindPopup('<a href="' + url + '">'+ feature.get('id') +'</a>');
+        .bindPopup('<img src="' + feature.get('imageUrl') + '" width="150px" /><br /><a href="' + url + '">'+ feature.get('id') +'</a>');
       });
       markers.forEach(function(marker) {
         marker.addTo(markerLayer);
